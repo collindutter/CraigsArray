@@ -1,0 +1,74 @@
+<head>
+    <title>craigslist: san luis obispo jobs, apartments, personals, for sale, services, community, and events</title>
+
+    <!-- Get jQuery and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <!-- Get cached Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <style>
+        #controls {
+            position: relative;
+            width: 480px;
+        }
+
+        .label {
+            text-align: right;
+            font-weight: bold;
+            width: 100px;
+            color: #303030;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">craigslist</a>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h1 class="card-header">Contact Info</h1>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input class="form-control" id="email" placeholder="jsmith@example.com" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input class="form-control" id="phone" placeholder="(xxx)xxx-xxxx" type="text">
+                    </div>
+                    <label>Contact By:</label>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="call">
+                        <label class="form-check-label" for="call">Call</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="text_msg">
+                        <label class="form-check-label" for="text_msg">Text</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-4 text-center">
+                    <a href="define_category.html" class="btn btn-primary float-left">Back</a>
+                </div>
+                <div class="col-4 text-center">
+                    <p>Step 2 of 4</p>
+                    <progress value="50" max="100">
+                </div>
+
+                <div class="col-4 text-center">
+                    <a href="details.html" class="btn btn-primary float-right">Next</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
