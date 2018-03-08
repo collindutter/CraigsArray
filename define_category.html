@@ -10,15 +10,92 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.1/css/mdb.min.css">
+    
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    
+      <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    
+      <script type="text/javascript" src="https://twitter.github.com/typeahead.js/releases/latest/typeahead.bundle.min.js"></script>
+    
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+
+<script type="text/javascript">//<![CDATA[
+var VanillaRunOnDomReady = function() {
+// Bootstrap 4 + MDB + typeahead label fix
+//Add class typeahead to your text input invoking typeahead
+$('.typeahead').on('focus', function() {
+    $(this).parent().siblings().addClass('active');
+}).on('blur', function() {
+    if (!$(this).val()) {
+        $(this).parent().siblings().removeClass('active');
+    }
+});
+
+var states = ['skateboard', 'bicycle', 'basketball', 'baseball', 'longboard'
+];
+ 
+//bloodhound demo
+//documentation : https://github.com/corejavascript/typeahead.js/blob/master/doc/bloodhound.md
+var states = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.whitespace,
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    // `states` is an array of state names defined in "The Basics"
+    local: states
+});
+
+//Documentation : https://github.com/corejavascript/typeahead.js/blob/master/doc/jquery_typeahead.md
+$('#myTitle .typeahead').typeahead({
+    highlight: true,
+    hint: true,
+    minLength: 2
+}, {
+    name: 'states',
+    source: states,
+    limit: 10
+});
+
+}
+
+var alreadyrunflag = 0;
+
+if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", function(){
+        alreadyrunflag=1; 
+        VanillaRunOnDomReady();
+    }, false);
+else if (document.all && !window.opera) {
+    document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>');
+    var contentloadtag = document.getElementById("contentloadtag")
+    contentloadtag.onreadystatechange=function(){
+        if (this.readyState=="complete"){
+            alreadyrunflag=1;
+            VanillaRunOnDomReady();
+        }
+    }
+}
+
+window.onload = function(){
+  setTimeout("if (!alreadyrunflag){VanillaRunOnDomReady}", 0);
+}//]]> 
+
+</script>
 
 </head>
 <body>
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="index.html">craigslist</a>
     </nav>
+
     <h1 class="center">What Are You Selling?</h1>
-    <div class="input-group col-lg-6 alignMiddle">
-        <input class="form-control" type="text" placeholder="Title">
+    <div id="myTitle" class="col-lg-6 alignMiddle">
+        <input class="form-control typeahead" type="text" placeholder="Title">
     </div>
     <div class="input-group mb-3 col-lg-6 nudge-middle">
         <select class="custom-select nudge-middle" id="inputGroupSelect01">
@@ -95,5 +172,68 @@
 .centerButton{
     margin-top:50px;
 }
+
+
+/***
+    TYPEAHEAD for MDB
+    by djibe
+***/
+
+.typeahead {
+    z-index: 1051;
+}
+
+
+/*If using icon span before input, like <i class="fa fa-asterisk prefix"></i>*/
+
+span.twitter-typeahead {
+    width: calc(100% - 3rem);
+    margin-left: 3rem;
+}
+
+
+/* Aspect of the dropdown of results*/
+
+.typeahead.dropdown-menu,
+span.twitter-typeahead .tt-menu {
+    min-width: 100%;
+    background: white;
+    /*as large as input*/
+    border: none;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+    border-radius: 0;
+    font-size: 1.2rem;
+}
+
+
+/*Aspect of results, done*/
+
+span.twitter-typeahead .tt-suggestion {
+    color: #4285F4;
+    cursor: pointer;
+    padding: 1rem;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+
+/*Hover a result, done*/
+
+span.twitter-typeahead .active.tt-suggestion,
+span.twitter-typeahead .tt-suggestion.tt-cursor,
+span.twitter-typeahead .active.tt-suggestion:focus,
+span.twitter-typeahead .tt-suggestion.tt-cursor:focus,
+span.twitter-typeahead .active.tt-suggestion:hover,
+span.twitter-typeahead .tt-suggestion.tt-cursor:hover {
+    background-color: #EEEEEE;
+    color: #4285F4;
+}
+
+label.active {
+    color: #4285F4 !important;
+}
+
+
+
 </style>
 </html>
