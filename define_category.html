@@ -18,32 +18,46 @@
     </nav>
     <h1 class="center">What Are You Selling?</h1>
     <div class="input-group col-lg-6 alignMiddle">
-        <input class="form-control" type="text">
+        <input class="form-control" type="text" placeholder="Title">
     </div>
-    <div class="dropdown nudge-left">
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        Category
-            <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu scrollable-menu nudge-left" role="menu" aria-labelledby="dropdownMenu1">
-            <li><a href="#">Antiques</a></li>
-            <li><a href="#">Appliances</a></li>
-            <li><a href="#">Arts & Crafts</a></li>
-            <li><a href="#">ATVs, UTVs, Snowmobiles</a></li>
-            <li><a href="#">Auto Parts</a></li>
-            <li><a href="#">Auto Wheels & Tires</a></li>
-            <li><a href="#">Baby & Kid Stuff</a></li>
-            <li><a href="#">Barter</a></li>
-            <li><a href="#">Bicycle Parts</a></li>
-            <li><a href="#">Bicycles</a></li>
-            <li><a href="#">Boat Parts</a></li>
-            <li><a href="#">Boats</a></li>
-            <li><a href="#">Books & Magazines</a></li>
-            <li><a href="#">Business/Commercial</a></li>
-            <li><a href="#">Cars & Trucks</a></li>
-            <li><a href="#">Computer Parts</a></li>
-            <li><a href="#">Computers</a></li>
-        </ul>
+    <div class="input-group mb-3 col-lg-6 nudge-middle">
+        <select class="custom-select nudge-middle" id="inputGroupSelect01">
+            <option selected>Category</option>
+            <option value="1">Job Offered</option>
+            <option value="2">Gig Offered</option>
+            <option value="3">Resume/Job Wanted</option>
+            <option value="4">Housing Offered/Wanted</option>
+            <option value="5">For Sale by Owner</option>
+            <option value="6">For Sale by Dealer</optiona>
+            <option value="7">Wanted by Owner</option>
+            <option value="8">Wanted by Dealer</option>
+            <option value="9">Service Offered</option>
+            <option value="10">Personal/Romance</option>
+            <option value="11">Community</option>
+            <option value="12">Event/Class</option>
+        </select>
+    </div>
+    <div class="input-group mb-3 col-lg-6 nudge-middle">
+        <select class="custom-select nudge-middle" id=inputGroupSelect02>
+            <option selected>Subcategory</option>
+            <option value="1">Antiques</option>
+            <option value="2">Appliances</option>
+            <option value="3">Arts & Crafts</option>
+            <option value="4">ATVs, UTVs, Snowmobiles</option>
+            <option value="5">Auto Parts</option>
+            <option value="6">Auto Wheels & Tires</option>
+            <option value="7">Baby & Kid Stuff</option>
+            <option value="8">Barter</option>
+            <option value="9">Bicycle Parts</option>
+            <option value="10">Bicycles</option>
+            <option value="11">Boat Parts</option>
+            <option value="12">Boats</option>
+            <option value="13">Books & Magazines</option>
+            <option value="14">Business/Commercial</option>
+            <option value="15">Cars & Trucks</option>
+            <option value="16">Computer Parts</option>
+            <option value="17">Computers</option>
+        </select>
     </div>
     <div class="text-center centerButton">
         <a class="btn btn-primary" href="contact_info.html" role="button">Next</a>
@@ -73,7 +87,7 @@ body {
     max-height: 200px;
     overflow-x: hidden;
 }
-.nudge-left{
+.nudge-middle{
     margin-top:10px;
     left: 50%;
     right: auto;
