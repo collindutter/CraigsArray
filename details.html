@@ -64,7 +64,7 @@
                     <div class="form-group">
                         <label for="category">Category</label>
                         <select class="custom-select" id="category">
-                            <option selected>Pick a category...</option>
+                            <option selected>For Sale by Owner</option>
                             <option value="1">Gig offered</option>
                             <option value="2">Resume / job wanted</option>
                             <option value="3">Housing wanted</option>
@@ -84,60 +84,16 @@
                             <option value="1">Bicycle</option>
                         </select>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group was-validated">
                         <label for="price">Price</label>
-                        <input class="form-control" id="price" placeholder="Price" type="text">
+                        <input class="form-control" required id="price" placeholder="Price" type="text">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group was-validated">
                         <label for="autocomplete">Location</label>
-                        <input class="form-control" id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text">
+                        <input class="form-control" required id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text">
                     </div>
                 </form>
-
-                <div class="row">
-                    <div class="col-8">
-                        <table id="address">
-                            <tr>
-                                <td class="label">Street address</td>
-                                <td class="slimField">
-                                    <input class="field" id="street_number" disabled="true"></input>
-                                </td>
-                                <td class="wideField" colspan="2">
-                                    <input class="field" id="route" disabled="true"></input>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label">City</td>
-                                <!-- Note: Selection of address components in this example is typical.
-                               You may need to adjust it for the locations relevant to your app. See
-                               https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
-                          -->
-                                <td class="wideField" colspan="3">
-                                    <input class="field" id="locality" disabled="true"></input>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label">State</td>
-                                <td class="slimField">
-                                    <input class="field" id="administrative_area_level_1" disabled="true"></input>
-                                </td>
-                                <td class="label">Zip code</td>
-                                <td class="wideField">
-                                    <input class="field" id="postal_code" disabled="true"></input>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label">Country</td>
-                                <td class="wideField" colspan="3">
-                                    <input class="field" id="country" disabled="true"></input>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="col-4">
-                        <div id="map"></div>
-                    </div>
-                </div>
+                <div id="map"></div>
             </div>
         </div>
         <div class="card-footer">

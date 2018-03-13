@@ -80,13 +80,13 @@
                         <div class="leftMargin20">
                             <h3>Contact:</h3>
                             <div>
-                                <button class="btn btn-default margin">Email</button>
+                                <button class="btn btn-default margin" data-toggle="modal" data-target="#emailModal">Email</button>
                             </div>
                             <div>
-                                <button class="btn btn-default margin">Call</button>
+                                <button class="btn btn-default margin" data-toggle="modal" data-target="#callModal">Call</button>
                             </div>
                             <div>
-                                <button class="btn btn-default margin">Text</button>
+                                <button class="btn btn-default margin" data-toggle="modal" data-target="#callModal">Text</button>
                             </div>
                         </div>
                     </div>
@@ -113,6 +113,43 @@
                 </div>
             </div>
         </div>
+    </div>
+    <!-- Modals -->
+    <div id="emailModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Contact Email</h4>
+          </div>
+          <div class="modal-body">
+            <p>jsmith@example.com</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="callModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Contact Phone</h4>
+          </div>
+          <div class="modal-body">
+            <p>(541)754-3010</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
     </div>
     <style>
         .center {
